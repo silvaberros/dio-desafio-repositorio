@@ -1,0 +1,75 @@
+#GUI x CLI > 
+Graphic User Interface x Command Line Interface
+
+CLI = Terminal (comandos)
+
+Comandos do Windows
+TAB			atalho do teclado que autocompleta o nome da pasta
+
+dir			listar (lista de diretórios)
+
+cd			mudança de diretório
+cd /			C:/
+cd windows		pasta windows
+cd ..			retorceder(voltar)
+
+cls			clear screen (limpar o terminal)
+
+mkdir			criar uma pasta
+mkdir workspace		criar a pasta workspace
+
+echo hello > hello.txt	cria o arquivo hello.txt
+
+del workspace		deleta os arquivos da pasta workspace
+
+rmdir workspace /S /Q	remover a pasta (/S e /Q são flags?)
+
+#GIT - BÁSICO
+
+1. SHA-1
+- Secure Hash Algorithm: conjunto de funções criptografadas
+- os dados encriptados geram um conjunto de caracteres de 40 dígitos
+- para identificar os arquivos de uma forma segura
+
+2. Objetos fundamentais
+	Blobs
+	Trees
+	Commits
+- Blobs (bolhas)
+	o git guarda esses arquivos fazendo o sha1 e tambem com os metadados 		desse arquivo (por isso o sha pode ser diferente, pois é tmb um blob)
+- Tree (árvore)
+	contem os blobs; ela é responsável por montar a estrutura de onde está 	os arquivos; a árvore aponta para blobs e para outras trees; a árvore 	também tem um sha1;
+- Commit
+	contem as árvores; aponta para a árvore, para o "parente" (commit 	anterior), aponta para um autor e aponta para uma mensagem; também 	possuem sha1;
+
+3. Sistema distribuído e Seguro
+- Várias pessoas contribuem com um so codigo
+- o codigo no git é confiavel, assim como as versões nas maquinas de cada pessoa que contribuiu para ele
+
+#CHAVES SSH e TOKENS
+
+1. Chave SSH
+- conexão segura e encriptada entre duas máquinas
+
+#PRIMEIROS COMANDOS
+1. Iniciar o GIT
+	git init
+
+2. Iniciar o versionamento
+	git add
+
+3. Criar um commit
+	git commit
+
+#CICLO DE VIDA DOS ARQUIVOS
+- git init > cria-se um repositório
+- git add > transforma um arquivo "untracked" para o "tracked > staged"
+- git commit > transforma o arquivo "tracked > staged" para "traked unmodified"
+- ao deletar o arquivo no git, ele volta a ser "untracked";
+- ao editar o arquivo traked ele se torna "modified"
+
+#RESOLVENDO CONFLITOS
+1. Merge conflicts
+-quando o arquivo remoto é auterado por outro usuário, antes de voce trabalhar neste mesmo arquivo na sua maquina, é preciso fazer um "pull" (puxar) pra atualizar o seu antes de poder modifica-lo
+
+

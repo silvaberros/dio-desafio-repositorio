@@ -1,0 +1,28 @@
+ls			listar
+ls -a			listar itens ocultos
+cd			mover-se entre pastas
+cd ..			voltar um nível
+mkdir			criar pasta/diretorio
+mv ".." ./ "./"		mover um arquivo para outra pasta
+
+#config inicial
+git init			inicializar repositorio
+git config --global user.email "email"
+git config --global user.name "nome"
+	
+#commit
+git add *				adicionar tudo
+git add/rm <file>			adicionar ou remover arquivos especif
+git commit -m "commit inicial"		comitar
+git status				status dos arquivos (traked, untraked)
+
+#push
+git remote add origin <url>		add a url do repositorio remoto; o 						termo "origin" é apenas um apelido 						para não precisar digitar/colar a url 						a todo momento
+git remote -v				lista os repositorios remotos
+git push origin master			"empurra" os codigos do origin para a 						branch master no repositorio remoto
+#clonar
+git clone <url>				clonar um repositorio
+
+
+ATALHOS
+ctrl+L		limpar
